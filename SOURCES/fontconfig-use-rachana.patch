@@ -1,0 +1,26 @@
+From 13b4ba91353a4ead4623d0133f6eb0283e91b15a Mon Sep 17 00:00:00 2001
+From: Akira TAGOH <akira@tagoh.org>
+Date: Tue, 13 Nov 2018 06:34:11 +0000
+Subject: [PATCH] Use Rachana instead of Meera for Malayalam
+
+Meera is a sans-serif font for Malayalam. that should be substituted for serif.
+---
+ conf.d/65-nonlatin.conf | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/conf.d/65-nonlatin.conf b/conf.d/65-nonlatin.conf
+index 54fb974f..1b9de316 100644
+--- a/conf.d/65-nonlatin.conf
++++ b/conf.d/65-nonlatin.conf
+@@ -63,7 +63,7 @@
+ 			<family>Lohit Sindhi</family>
+  			<family>Lohit Punjabi</family>
+  			<family>Lohit Tamil</family>
+-			<family>Meera</family>
++			<family>Rachana</family>
+ 			<family>Lohit Malayalam</family>
+  			<family>Lohit Kannada</family>
+  			<family>Lohit Telugu</family>
+-- 
+2.19.1
+

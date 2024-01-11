@@ -1,0 +1,25 @@
+From c336b8471877371f0190ba06f7547c54e2b890ba Mon Sep 17 00:00:00 2001
+From: Akira TAGOH <akira@tagoh.org>
+Date: Thu, 9 May 2019 07:10:11 +0000
+Subject: [PATCH] fc-validate: returns an error code when missing some glyphs
+
+Fixes https://gitlab.freedesktop.org/fontconfig/fontconfig/issues/154
+---
+ fc-validate/fc-validate.c | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/fc-validate/fc-validate.c b/fc-validate/fc-validate.c
+index 2ceee20..327ae63 100644
+--- a/fc-validate/fc-validate.c
++++ b/fc-validate/fc-validate.c
+@@ -197,6 +197,7 @@ main (int argc, char **argv)
+ 		{
+ 		    FcChar32 ucs4, pos, map[FC_CHARSET_MAP_SIZE];
+ 
++		    err = 1;
+ 		    printf (_("%s:%d Missing %d glyph(s) to satisfy the coverage for %s language\n"),
+ 			    argv[i], index, count, lang);
+ 
+-- 
+2.31.1
+
